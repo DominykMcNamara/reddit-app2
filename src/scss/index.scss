@@ -1,0 +1,42 @@
+$gray: #FCFCFC;
+$white: #FFFFFF;
+$green: #44B81F;
+$red: #FE6779;
+$blue: #3D5AF1;
+
+$primary: $gray;
+$secondary: $white;
+$danger: $red;
+$success: $blue;
+
+.card:hover {
+    box-shadow: 0 1rem 3rem rgba(black, .175);
+    transition: all 0.25s ease;
+}
+
+#logo {
+    height: 2rem;
+    width: 2rem;
+}
+
+#icon {
+    height: 1rem;
+    width: 1rem;
+    cursor: pointer;
+    opacity: 75%;
+}
+
+#icon:hover {
+    opacity: 100%;
+    background-color: #FCFCFC;
+    transition: all 0.1s ease;
+}
+
+span {
+    display: inline-flex;
+}
+
+
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
