@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useGetPostsQuery } from "../../app/redditApi";
-
+import { Post } from "./Post";
 export const PostList = () => {
   const { data, error, isLoading } = useGetPostsQuery();
 
@@ -11,9 +11,9 @@ export const PostList = () => {
     content = <h1>Loading....</h1>;
   } else if (data) {
     content = data.data.children.map((post) => (
-      <ul>
+      <ul  key={post.data.id}>
         {" "}
-        <li key={post.data.id}>{post.data.id}</li>
+       <Post post={post.data} />
       </ul>
     ));
   } else {

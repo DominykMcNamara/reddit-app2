@@ -7,8 +7,11 @@ export const redditApi = createApi({
     endpoints: (builder) => ({
         getPosts: builder.query({
             query: () => 'r/popular.json'
+        }),
+        getPostComments: builder.query({
+            query: permalink => `${permalink}.json`
         })
     })
 })
 
-export const {useGetPostsQuery} = redditApi
+export const {useGetPostsQuery, useGetPostCommentsQuery} = redditApi
