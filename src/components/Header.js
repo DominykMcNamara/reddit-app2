@@ -1,6 +1,6 @@
 import React from "react";
 import RedditLogo from "../assets/reddit-4.svg";
-import { Searchbar } from "../features/posts/Searchbar";
+import { Searchbar } from "../features/search/SearchBar";
 
 export const Header = () => {
   return (

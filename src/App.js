@@ -1,9 +1,14 @@
+import { Routes, Route, Navigate } from "react-router-dom";
+import { Layout } from "./components/Layout";
+import { PostList } from "./features/posts/PostList";
 
 function App() {
   return (
-    <div className="App">
-      <h1>hello world</h1>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+         <Route index element={<PostList />} />
+      </Route>
+    </Routes>
   );
 }
 
