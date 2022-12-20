@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import React, { useEffect } from "react";
 import { useGetPostsQuery } from "../../app/redditApi";
 
 export const PostList = () => {
-  const dispatch = useDispatch();
   const { data, error, isLoading } = useGetPostsQuery();
 
   useEffect(() => console.log(data));
