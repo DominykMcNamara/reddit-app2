@@ -6,7 +6,7 @@ export const redditApi = createApi({
     baseQuery: fetchBaseQuery({ baseUrl: 'https://www.reddit.com/'}),
     endpoints: (builder) => ({
         getPosts: builder.query({
-            query: () => 'r/popular.json'
+            query: sub => `r/${sub}.json`
         }),
         getPostComments: builder.query({
             query: permalink => `${permalink}.json`

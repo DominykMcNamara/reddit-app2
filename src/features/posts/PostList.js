@@ -3,7 +3,7 @@ import { useGetPostsQuery } from "../../app/redditApi";
 import { Post } from "./Post";
 
 export const PostList = () => {
-  const { data, error, isLoading } = useGetPostsQuery();
+  const { data, error, isLoading } = useGetPostsQuery('popular');
 
   useEffect(() => console.log(data));
 
