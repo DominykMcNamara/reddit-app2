@@ -1,7 +1,7 @@
 import React from "react";
 import { Header } from "./Header";
 import { Outlet } from "react-router-dom";
-
+import { SubredditsList } from "../features/subreddits/SubredditsList";
 
 export const Layout = () => {
   return (
@@ -9,8 +9,9 @@ export const Layout = () => {
       <header>
         <Header />
       </header>
-      <main className="App">
+      <main className="App d-flex flex-row">
         <Outlet />
+        <SubredditsList />
       </main>
     </div>
   );

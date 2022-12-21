@@ -10,8 +10,11 @@ export const redditApi = createApi({
         }),
         getPostComments: builder.query({
             query: permalink => `${permalink}.json`
+        }),
+        getSubReddits: builder.query({
+            query: () => `subreddits.json`
         })
     })
 })
 
-export const {useGetPostsQuery, useGetPostCommentsQuery} = redditApi
+export const {useGetPostsQuery, useGetPostCommentsQuery, useGetSubRedditsQuery} = redditApi
