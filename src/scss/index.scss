@@ -14,6 +14,11 @@ $success: $blue;
     transition: all 0.25s ease;
 }
 
+#comment:hover {
+    box-shadow: 0 1rem 3rem rgba(black, .175);
+    transition: all 0.25s ease;
+}
+
 #logo {
     height: 2rem;
     width: 2rem;

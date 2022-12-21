@@ -3,9 +3,9 @@ import chatIcon from "../../assets/chat-square.svg";
 import thumbsUp from "../../assets/hand-thumbs-up.svg";
 import thumbsDown from "../../assets/hand-thumbs-down.svg";
 import redditLogo from "../../assets/reddit-4.svg";
-import { formatDate } from "../../utils/formatDate";
 import { formatNumber } from "../../utils/formatNumber";
 import { CommentList } from "../comments/CommentList";
+import moment from 'moment';
 
 export const Post = ({ post }) => {
     const [showCommentList, setShowCommentList] = useState(false);
@@ -49,7 +49,7 @@ export const Post = ({ post }) => {
           )}
            <div className="d-flex flex-row align-content-center justify-content-around my-4">
             <p className="text-success">{post.author}</p>
-            <p>{formatDate(post.created)}</p>
+            <p>{moment.unix(post.created_utc).fromNow()}</p>
             <span>
               <img
                 id="icon"
