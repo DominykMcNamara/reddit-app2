@@ -17,5 +17,10 @@ export const SubredditsList = () => {
   } else {
     content = <h1>{error}</h1>;
   }
-  return <aside>{content}</aside>;
+  return (
+    <aside>
+      <h4 className="text-center">Subreddits</h4>
+      {content}
+    </aside>
+  );
 };

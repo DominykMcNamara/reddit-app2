@@ -1,8 +1,14 @@
 import { useState } from "react";
-
+import { useSelector, useDispatch } from "react-redux";
+import { getNewPosts } from "../features/posts/postsSlice";
 
 export const Searchbar = () => {
+  const dispatch = useDispatch()
   const [searchTerm, setSearchTerm] = useState(" ")
+
+  const handleNewSearchTerm = () => {
+     dispatch(getNewPosts(searchTerm))
+  }
   return (
     <div className="input-group w-75 shadow-lg">
       <input
@@ -12,7 +18,7 @@ export const Searchbar = () => {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <button className="btn btn-success outline-none" type="button" id="button-addon1">
+      <button onClick={handleNewSearchTerm} className="btn btn-success outline-none" type="button" id="button-addon1">
         Search
       </button>
   

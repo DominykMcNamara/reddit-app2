@@ -1,11 +1,10 @@
 import React from "react";
 import RedditLogo from "../assets/reddit-4.svg";
-import { Searchbar } from "../features/search/SearchBar";
-
+import { Searchbar } from "./SearchBar";
 export const Header = () => {
   return (
-    <div className="container-fluid py-5 h-25 bg-secondary   ">
-      <div className="d-flex flex-row justify-content-between w-75 mx-auto">
+    <div className="container-fluid py-5 h-25 bg-secondary ">
+      <div className="d-flex flex-row justify-content-around w-75 mx-auto">
         <img
           id="logo"
           className="img-fluid"
