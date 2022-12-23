@@ -1,11 +1,10 @@
-import { useDispatch, useSelector } from "react-redux";
-import { selectCurrentPosts } from "../posts/postsSlice";
+import { useDispatch } from "react-redux";
+
 import { getNewPosts } from "../posts/postsSlice";
 import redditLogo from '../../assets/reddit-4.svg'
 
 export const SubReddit = ({subReddit}) => {
   const dispatch = useDispatch()
-  const sub = useSelector(selectCurrentPosts)
   const handleSubChange = () => {
     dispatch(getNewPosts(subReddit.display_name))
   }
