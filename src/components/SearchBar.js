@@ -4,7 +4,7 @@ import { getNewPosts } from "../features/posts/postsSlice";
 
 export const Searchbar = () => {
   const dispatch = useDispatch()
-  const [searchTerm, setSearchTerm] = useState(" ")
+  const [searchTerm, setSearchTerm] = useState("")
 
   const handleNewSearchTerm = () => {
      dispatch(getNewPosts(searchTerm))
@@ -18,7 +18,7 @@ export const Searchbar = () => {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <button onClick={handleNewSearchTerm} className="btn btn-success outline-none" type="button" id="button-addon1">
+      <button onClick={handleNewSearchTerm} className="btn btn-success outline-none" type="submit" id="button-addon1">
         Search
       </button>
   

@@ -8,7 +8,7 @@ export const CommentList = ({permalink}) => {
 
     let content;
     if (isLoading) {
-        content = <h1>Loading...</h1>
+        content = <p>Loading...</p>
     } else if ( data ) {
         content =  data[1].data.children.map(comment => (
             <ul key={comment.data.id}>
@@ -16,7 +16,7 @@ export const CommentList = ({permalink}) => {
             </ul>
         ) )
     } else {
-        content = <h1>{error}</h1>
+        content = <p>{error}</p>
     }
   return (
     <div>

@@ -11,7 +11,7 @@ export const Post = ({ post }) => {
     const [showCommentList, setShowCommentList] = useState(false);
   return (
     <>
-      <article className="mx-auto card  h-100 w-100 bg-secondary mt-2 mb-2 py-4">
+      <article className="mx-auto card h-100 bg-secondary mt-2 mb-2 py-4">
         <div className="card-body text-start">
           <div className="d-flex flex-row">
             <aside className="d-flex flex-column">
@@ -36,6 +36,7 @@ export const Post = ({ post }) => {
             <picture className="d-flex justify-content-center border-bottom py-4">
               <img
                 src={post.url}
+              
                 alt=""
                 onError={({ currentTarget }) => {
                   currentTarget.onerror = null; // prevents looping

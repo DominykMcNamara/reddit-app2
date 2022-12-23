@@ -15,7 +15,7 @@ export const PostList = () => {
 
   let content;
   if (isLoading) {
-    content = <h1>Loading....</h1>;
+    content = <p>Loading....</p>;
   } else if (data) {
     content = data.data.children.map((post) => (
       <ul key={post.data.id}>
@@ -24,8 +24,8 @@ export const PostList = () => {
       </ul>
     ));
   } else {
-    content = <h1>{error}</h1>;
+    content = <p>{error}</p>;
   }
 
-  return <section>{content}</section>;
+  return <section className="w-100">{content}</section>;
 };

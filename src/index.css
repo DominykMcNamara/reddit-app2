@@ -37,6 +37,32 @@ span {
   display: inline-flex;
 }
 
+@media screen and (min-width: 0px) {
+  #subredditList {
+    visibility: hidden;
+    display: none;
+  }
+  #header {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 540px) {
+  #subredditList {
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .sub {
+    text-align: center;
+  }
+}
 /*!
  * Bootstrap  v5.2.3 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors

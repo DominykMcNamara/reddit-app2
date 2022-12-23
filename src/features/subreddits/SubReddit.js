@@ -1,8 +1,18 @@
+import { useDispatch, useSelector } from "react-redux";
+import { selectCurrentPosts } from "../posts/postsSlice";
+import { getNewPosts } from "../posts/postsSlice";
+import redditLogo from '../../assets/reddit-4.svg'
+
 export const SubReddit = ({subReddit}) => {
+  const dispatch = useDispatch()
+  const sub = useSelector(selectCurrentPosts)
+  const handleSubChange = () => {
+    dispatch(getNewPosts(subReddit.display_name))
+  }
   return (
-    <div id="sub" className="d-flex flex-row p-1 rounded ">
-      <img id="logo" className="rounded-4" src={subReddit.icon_img || `https://api.adorable.io/avatars/25/${subReddit.display_name}` } alt={`${subReddit.display_name} logo`}/>
+    <button onClick={handleSubChange} id="sub" className=" btn d-flex flex-row p-1 rounded">
+      <img id="logo" className="rounded-4" src={subReddit.icon_img || redditLogo} alt={`${subReddit.display_name} logo`}/>
       <p className="mx-2">{subReddit.display_name}</p>
-    </div>
+    </button>
   )
 }
