@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useGetSubRedditsQuery } from "../../app/redditApi";
 import { SubReddit } from "./SubReddit";
 
